@@ -1,5 +1,7 @@
 <!-- cSpell:enable  -->
 
+# DESCRIPTION:
+This webpage is about the BYU London Centre Summer 2023 Study Abroad. It goes over where we will be going. The about page shows the history of the London Centre and the Contact page will give informaiton on program directors. The cards show places we will visit. 
 # Responsive flexboxes
 
 **Objectives**: Learn how to use flexbox and media queries to create responsive layouts.
