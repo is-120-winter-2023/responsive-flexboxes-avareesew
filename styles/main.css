@@ -280,11 +280,71 @@ header ul {
   list-style-type: none;
 }
 
-header nav a {
-  position: relative;
+nav {
+  display: none;
+}
+
+.close nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 80rem;
+}
+
+.close nav a {
   color: white;
-  display: inline-block;
+  display: block;
   padding: 1rem;
+}
+.close nav {
+  position: fixed;
+  inset: 0;
+  background-color: #012b7b;
+  visibility: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 1.5rem;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-heading2);
+  z-index: 2;
+}
+
+.menu-icon line {
+  stroke: #fff;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  transform-origin: center;
+  transition: transform 300ms ease;
+}
+
+.menu-icon line:first-child {
+  transform: translateY(16%);
+}
+
+.menu-icon line:last-child {
+  transform: translateY(-16%);
+}
+
+/* JavaScript toggles a "close" class on the <nav> when the menu-icon is clicked */
+
+.close line:first-child {
+  transform: rotate(135deg);
+}
+
+.close line:last-child {
+  transform: rotate(-135deg);
 }
 
 @media (min-width: 500px) {
@@ -308,6 +368,22 @@ header nav a {
   }
   .panel .left {
     order: -1;
+  }
+}
+
+@media (min-width: 600px) {
+  header nav a {
+    position: relative;
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+  }
+
+  nav {
+    display: contents;
+  }
+  .menu-icon {
+    display: none;
   }
 }
 
