@@ -19,11 +19,17 @@
     rel="stylesheet">
   <link rel="stylesheet" href="../styles/main.css">
   <title>About</title>
+  <style>
+    main {
+      align-self: center;
+      padding: 0rem;
+      max-width: 100vw;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- TODO: add menu links, delete this comment -->
-  <header>
+  <header class="about-header">
     <div class="menu-icon">
       <svg viewbox="0 0 60 60">
         <line x1="5%" y1="50%" x2="95%" y2="50%" />
@@ -38,14 +44,23 @@
       </ul>
     </nav>
   </header>
-
   <main>
-    <h1>About</h1>
-    <img srcset="../images/londoncentre-300.jpg 300w,
-            ../images/londoncentre-600.jpg 600w,
-            ../images/londoncentre-900.jpg 900w" sizes="50vw" src="../images/londoncentre-600.jpg"
-      alt="the BYU london centre streetview" width="600" height="600">
+    <div class="about-page">
+      <div class="scroll-h">
+        <article>
+          <h1>About the Centre</h1>
+        </article>
+        <article>
+          <h2>The Centre opened its doors to students summer of 1977.</h2>
+        </article>
+        <img src="../images/old-center.jpg" alt="old picture of the London Centre">
+        <article>
+          <h2>The End.</h2>
+        </article>
+      </div>
+    </div>
   </main>
+
   <script>
     const header = document.querySelector("header");
 
